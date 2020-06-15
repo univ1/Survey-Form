@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Survey Form</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+		<!-- cover photo inside div to avoid changing opacity of body -->
+		<div id="cover">
+		</div>
+		
+		<header>
+			<h1 id="title">Market Research Survey</h1>
+			<p id="description">Please take a few minutes to complete this survey</p>
+		</header>
+		
+		<main>
+			
+			<!-- Maybe add different form groups for additional styling -->
+		
+			<form id="survey-form">
+				<div id="survey-content">
+			
+				<label id="name-label" class="label label1" for="name">Name</label>
+				<input type="text" id="name" class="input-field-dropdown-textarea" name="name" placeholder="Enter your name" required>
+				
+				<label id="email-label" class="label label1" for="email">Email</label>
+				<input type="email" id="email" class="input-field-dropdown-textarea" name="email" placeholder="Enter your email" required>
+				
+				<label id="number-label" class="label label1" for="number">Age</label>
+				<input type="number" id="number" class="input-field-dropdown-textarea" name="number" placeholder="Enter your age" required min="1" max="150">
+				
+				<fieldset>
+					<legend id="gender-label" class="label2">What is your gender?</legend>
+					<label class="label radio-checkbox-label"  for="male">
+						<input id="male" type="radio" class="input-radio-checkbox" name="gender" value="male" required>Male
+					</label>
+					<label class="label radio-checkbox-label"  for="female">
+						<input id="female" type="radio" class="input-radio-checkbox" name="gender" value="female">Female
+					</label>
+					<label class="label radio-checkbox-label" for="other">
+						<input id="other" type="radio" class="input-radio-checkbox" name="gender" value="other">Other
+						<input id="other-text" class="input-field-dropdown-textarea" type="text">
+					</label>
+				</fieldset>
+		
+				<label id="dropdown-label" class="label label1" for="dropdown">What is the highest level of education you have completed?</label>
+				<select id="dropdown" class="input-field-dropdown-textarea" name="options" required>
+					<option disabled selected value>Select an option</option>
+					<option value="option1">High school diploma or GED</option>
+					<option value="option2">Associate degree</option>
+					<option value="option3">Bachelor's degree</option>
+					<option value="option4">Master's degree</option>
+					<option value="option5">Professional degree</option>
+					<option value="option6">Doctorate degree</option>
+					<option value="option7">Prefer not to say</option>
+				</select>
+
+				<fieldset>
+					<legend id="advertisement-label" class="label2">Where have you seen our advertisements? (Select all that apply)</legend>
+					<label class="label radio-checkbox-label" for="internet">
+						<input id="internet" class="input-radio-checkbox" type="checkbox" name="advertisements" value="internet">Internet
+					</label>
+					<label class="label radio-checkbox-label" for="television">
+						<input id="television" class="input-radio-checkbox" type="checkbox" name="advertisements" value="television">TV
+					</label>
+					<label class="label radio-checkbox-label" for="magazine">
+						<input id="magazine" class="input-radio-checkbox" type="checkbox" name="advertisements" value="magazine">Magazine
+					</label>
+					<label class="label radio-checkbox-label" for="newspaper">
+						<input id="newspaper" class="input-radio-checkbox" type="checkbox" name="advertisements" value="newspaper">Newspaper
+					</label>
+					<label class="label radio-checkbox-label" for="billboard">
+						<input id="billboard" class="input-radio-checkbox" type="checkbox" name="advertisements" value="billboard">Billboard
+					</label>
+				</fieldset>
+				
+				<fieldset>
+					<legend id="website-label" class="label2">On average, how often do you visit our website?</legend>
+					<label class="label radio-checkbox-label" for="multiple-times-per-day">
+						<input id="multiple-times-per-day" type="radio" class="input-radio-checkbox" name="website-visits" value="multiple times per day" required>Multiple times per day
+					</label>
+					<label class="label radio-checkbox-label" for="daily">
+						<input id="daily" type="radio" class="input-radio-checkbox" name="website-visits" value="daily">Daily
+					</label>
+					<label class="label radio-checkbox-label" for="almost-everyday">
+						<input id="almost-everyday" type="radio" class="input-radio-checkbox" name="website-visits" value="almost-everyday">Almost everyday
+					</label>
+					<label class="label radio-checkbox-label" for="few-times-per-week">
+						<input id="few-times-per-week" type="radio" class="input-radio-checkbox" name="website-visits" value="few times per week">A few times per week
+					</label>
+					<label class="label radio-checkbox-label" for="weekly">
+						<input id="weekly" type="radio" class="input-radio-checkbox" name="website-visits" value="weekly">Weekly
+					</label>
+					<label class="label radio-checkbox-label" for="less-than-weekly">
+						<input id="less-than-weekly" type="radio" class="input-radio-checkbox" name="website-visits" value="less than weekly">Less than weekly
+					</label>
+				</fieldset>
+				
+				<label id="comments-label" class="label label1" for="comments">Comments</label>
+				<textarea id="comments" class="input-field-dropdown-textarea" name="comments" placeholder="Enter your comments here..." rows="5" cols="33"></textarea>
+				
+				<button id="submit" type="submit">Submit</button>
+				
+				</div>
+				
+			</form>
+			
+			
+		</main>
+	
+		<script src="main.js"></script>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	</body>
+</html>

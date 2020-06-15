@@ -1,0 +1,138 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-navy: #000032;
+	--color-white: #FFFFFF;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#cover {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(rgba(0, 0, 128, 0.4), rgba(0, 0, 0, 0.7)), url(https://farm8.staticflickr.com/7760/17459832099_bd9dbe7f3a_b.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+#title {
+	position: relative;
+	top: 0.75em;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 2.25em;
+}
+
+#description {
+	position: relative;
+	top: 1.5em;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#survey-form {
+	position: relative;
+	top: 2em;
+	margin:auto;
+	min-width: 300px;
+	width: 45%;
+	background-color: var(--color-navy);
+	opacity: 0.8;
+	font-size: 1.25em;
+	border-radius: 5px;
+}
+
+#survey-content {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: row;
+	border-radius: 5px;
+}
+
+.label {
+	color: var(--color-white);
+	padding: 0.2em;
+}
+
+.radio-checkbox-label {
+	position: relative;
+	bottom: 0.5em;
+}
+
+.input-field-dropdown-textarea {
+	font-size: 0.75em;
+	padding: 0.625em 0 0.625em 0.625em;
+	margin: 0 3em;
+	border-radius: 5px;
+	border: none;
+}
+
+.input-radio-checkbox {
+	margin-left: 1.5em;
+	height: 1.2em;
+	width: 1.2em;
+	margin-right: 1em;
+}
+
+#other-text {
+	margin-left: 0.5em;
+	height: 0.5em;
+	visibility: hidden;
+}
+
+#other:checked + #other-text {
+	visibility: visible;
+}
+
+.label1 {
+	padding: 1em 2.25em 0.5em 2.25em;
+}
+
+.label2 {
+	color: var(--color-white);
+	padding: 1.25em;
+}
+
+#comments {
+	margin: auto;
+	width: 86%;
+	font-size: 1em;
+}
+
+#submit {
+	border-color: var(--color-white);
+	background-color: var(--color-white);
+	height: 3em;
+	margin: 3em;
+	border-radius: 5px;
+}
+
+#submit:hover {
+	animation-name: background-color;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes background-color {
+	100% {
+		background-color: yellow;
+		border-color: yellow;
+	}
+}
